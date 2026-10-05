@@ -3,32 +3,36 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int value;
+        int value = getIntInput(scanner);
+        System.out.println("Du skrev: " + value);
+        
+        scanner.close();
+    }
+
+    public static int getIntInput(Scanner scanner) {
 
         while (true) {
-            System.out.print("Enter a number: ");
+            System.out.print("Skriv en siffra: ");
             String line = scanner.nextLine().trim();
 
             if (line.isEmpty()) {
-                System.out.println("Input cannot be empty or whitespace.");
+                System.out.println("Ogiltig inmatning");
                 continue;
             }
 
             try {
-                value = Integer.parseInt(line);
+                int value = Integer.parseInt(line);
 
                 if (value < 0) {
-                    System.out.println("Input cannot be negative.");
+                    System.out.println("Siffror kan inte vara negativa");
                     continue;
                 }
 
-                break;
+                return value;
+
             } catch (NumberFormatException e) {
-                System.out.println("'" + line + "' is not a valid input.");
+                System.out.println("'" + line + "' ogiltigt.");
             }
         }
-
-        System.out.println(value);
-        scanner.close();
     }
 }
