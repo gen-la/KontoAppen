@@ -2,11 +2,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        AccountRegister register = new AccountRegister();
         Scanner scanner = new Scanner(System.in);
-        int value = getIntInput(scanner);
-        System.out.println("Du skrev: " + value);
-        
-        scanner.close();
+        int choice = 0;
+        //int value = getIntInput(scanner);
+        //System.out.println("Du skrev: " + value);
+        //scanner.close();
     }
 
     public static int getIntInput(Scanner scanner) {
