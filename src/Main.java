@@ -42,7 +42,6 @@ public class Main {
                 if (found != null){
                     System.out.print("Belopp: ");
                     int amount = getIntInput(scanner);
-                    //scanner.nextLine();
                     found.deposit(amount);
                     System.out.println("Nytt saldo: " + found.getBalance());
                 } else {
