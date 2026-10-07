@@ -5,9 +5,7 @@ public class Main {
         AccountRegister register = new AccountRegister();
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
-        //int value = getIntInput(scanner);
-        //System.out.println("Du skrev: " + value);
-        //scanner.close();
+
         while (choice != 6){
             System.out.println();
             System.out.println("1. Skapa konto");
@@ -18,18 +16,25 @@ public class Main {
             System.out.println("6. Avsluta");
             System.out.print("Val: ");
             choice = getIntInput(scanner);
-            //scanner.nextLine();
 
             if (choice == 1){
                 System.out.print("Namn: ");
                 String name = scanner.nextLine();
                 System.out.print("Startsaldo: ");
                 int balance = getIntInput(scanner);
-                //scanner.nextLine();
                 register.createAccount(name, balance);
                 System.out.println("Kontot skapat.");
             } else if (choice == 2){
                 register.printAll();
+            } else if (choice == 3){
+                System.out.print("Sök på namn: ");
+                String name = scanner.nextLine();
+                Account found = register.findAccount(name);
+                if (found != null){
+                    System.out.println(name);
+                } else {
+                    System.out.println("Kunde inte hitta " + name);
+                }
             } else if (choice == 4){
                 System.out.print("Namn: ");
                 String name = scanner.nextLine();
@@ -40,6 +45,22 @@ public class Main {
                     //scanner.nextLine();
                     found.deposit(amount);
                     System.out.println("Nytt saldo: " + found.getBalance());
+                } else {
+                    System.out.println("Konto saknas: " + name);
+                }
+            } else if (choice == 5){
+                System.out.print("Namn: ");
+                String name = scanner.nextLine();
+                Account found = register.findAccount(name);
+                if (found != null){
+                    System.out.print("Belopp: ");
+                    int amount = getIntInput(scanner);
+                    if (amount > found.getBalance()){
+                        System.out.print("Ogiltig summa, inte tillräckligt med pengar på kontot. Ditt saldo: " + found.getBalance());
+                    } else {
+                        found.withdraw(amount);
+                        System.out.println("Nytt saldo: " + found.getBalance());
+                    }
                 } else {
                     System.out.println("Konto saknas: " + name);
                 }
@@ -54,7 +75,6 @@ public class Main {
     public static int getIntInput(Scanner scanner) {
 
         while (true) {
-            //System.out.print("Skriv en siffra: ");
             String line = scanner.nextLine().trim();
 
             if (line.isEmpty()) {
