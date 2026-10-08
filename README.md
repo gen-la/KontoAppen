@@ -25,3 +25,7 @@ Reflektion
 ----------
 Funktionen som kontrollerar om användaren matar in en positiv siffra var det som var svårast. Jag googlade runt på hur man kan hindra en användare från att mata in något annat än siffror, men kunde inte hitta något. Då googlade jag på hur man kan kolla om inmatningen är en siffra eller något annat och hittade try och catch. Kodexemplen var inte så lätta att förstå och det fanns ingen förklaring tillsammans med de, så jag vände mig till ChatGPT och bad den förklara steg för steg. Den förklarade så att jag förstod och fökortade koden och gjorde den enklare.
 Jag stötte på problem med sökfunktionen, istället för att returnera det namn som användaren matat in fick jag antingen null eller en rad med siffror och bokstäver. Efter att ha kollat igenom koden noga såg jag att jag använt variabeln found istället för name i System.out.println(name).
+
+-----------------------
+Länk till redovisningen
+-----------------------
