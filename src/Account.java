@@ -20,10 +20,6 @@ public class Account {
     }
 
     public void withdraw(int amount){
-        if(amount > balance){
-            System.out.println("Ogiltig summa, inte tillräckligt med pengar på kontot.");
-        } else {
-            balance -= amount;
-        }
+        balance -= amount;
     }
 }

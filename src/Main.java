@@ -55,7 +55,7 @@ public class Main {
                     System.out.print("Belopp: ");
                     int amount = getIntInput(scanner);
                     if (amount > found.getBalance()){
-                        System.out.print("Ogiltig summa, inte tillräckligt med pengar på kontot. Ditt saldo: " + found.getBalance());
+                        System.out.println("Ogiltig summa, inte tillräckligt med pengar på kontot. Ditt saldo: " + found.getBalance());
                     } else {
                         found.withdraw(amount);
                         System.out.println("Nytt saldo: " + found.getBalance());

@@ -29,3 +29,4 @@ Jag stötte på problem med sökfunktionen, istället för att returnera det nam
 -----------------------
 Länk till redovisningen
 -----------------------
+https://funet-my.sharepoint.com/:v:/g/personal/3kdyhapp26_lahage_folkuniversitetet_nu/IQCMmjiF_ClcTaV8O50RQjhKAaCHpZZfpvWqfVdXB_Cas0w?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=KdekoD
